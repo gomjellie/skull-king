@@ -389,12 +389,13 @@ const SkullKing: React.FC = () => {
     const roundTricksLeft = tricksLeft(round);
     if (roundTricksLeft > 0) {
       return (
-        <div className="flex items-center justify-center text-blue-500 font-bold mt-2">
-          <AlertTriangle className="mr-2" />
+        <div className="w-full bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-center justify-center text-blue-600 font-bold text-lg">
+          <AlertTriangle className="mr-2" size={20} />
           {roundTricksLeft} tricks left!
         </div>
       );
     }
+    return null;
   };
 
   const renderTrickLimitExceededMessage = (round: Round) => {
@@ -456,7 +457,7 @@ const SkullKing: React.FC = () => {
   }
 
   return (
-    <div className="p-2 max-w-sm mx-auto">
+    <div className="p-2 max-w-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto">
       <h1 className="text-xl font-bold mb-2">Skull King</h1>
       <Card className="mb-2">
         <CardHeader className="p-2">
@@ -478,7 +479,7 @@ const SkullKing: React.FC = () => {
             </Button>
           </CardTitle>
         </CardHeader>
-        <CardContent className="p-2">
+        <CardContent className="p-2 md:grid md:grid-cols-2 gap-2">
           {rounds[currentRoundIndex].playerScores.map(
             (playerScore, playerIndex) => (
               <div key={playerIndex} className="mb-2 p-2 border rounded">
@@ -531,7 +532,9 @@ const SkullKing: React.FC = () => {
             )
           )}
           {renderTrickLimitExceededMessage(rounds[currentRoundIndex])}
-          {renderTricksLeftMessage(rounds[currentRoundIndex])}
+          <div className="w-full">
+            {renderTricksLeftMessage(rounds[currentRoundIndex])}
+          </div>
         </CardContent>
       </Card>
 
