@@ -35,7 +35,7 @@ A Progressive Web App (PWA) for calculating scores in the Skull King card game.
 
 To install the app on your device:
 
-1. Visit [https://frisoft.it/skull-king](https://frisoft.it/skull-king) in your web browser.
+1. Visit [https://gomjellie.github.io/skull-king](https://gomjellie.github.io/skull-king) in your web browser.
 2. For iOS: Tap the share button and select "Add to Home Screen".
 3. For Android: Tap the menu button and select "Add to Home Screen" or "Install App".
 4. For desktop: Look for the install icon in your browser's address bar.

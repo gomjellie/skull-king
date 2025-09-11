@@ -1,0 +1,56 @@
+{
+  "name": "스컬킹 점수 계산기",
+  "short_name": "스컬킹",
+  "description": "스컬킹 카드 게임을 위한 무료 온라인 점수 계산기입니다. 2-8명의 플레이어를 지원하며, 특수 카드 추적과 실시간 점수 업데이트 기능을 제공합니다. Free online score calculator for Skull King card game.",
+  "start_url": "/skull-king/",
+  "scope": "/skull-king/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "lang": "ko",
+  "categories": ["games", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/skull-king-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "type": "image/png",
+      "sizes": "1200x630",
+      "form_factor": "wide"
+    }
+  ]
+}

@@ -1,10 +1,153 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/skull-king-icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/maskable_icon.png" color="#000000" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skull King</title>
+
+    <!-- Primary Meta Tags -->
+    <title>스컬킹 점수 계산기</title>
+    <meta name="title" content="스컬킹 점수 계산기" />
+    <meta
+      name="description"
+      content="스컬킹 카드 게임을 위한 무료 온라인 점수 계산기입니다. 2-8명의 플레이어를 지원하며, 특수 카드 추적과 실시간 점수 업데이트 기능을 제공합니다. PWA로 오프라인에서도 사용 가능합니다."
+    />
+    <meta
+      name="keywords"
+      content="Skull King, 스컬킹, 카드게임, 점수계산기, 보드게임, PWA, 무료게임, 온라인게임, 점수관리, card game, score calculator, board game, free game, online game, score tracker, skull king calculator, skull king score, trick taking game"
+    />
+    <meta name="author" content="Skull King Score Calculator" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://gomjellie.github.io/skull-king/screenshot.png"
+    />
+    <meta
+      property="og:title"
+      content="Skull King 점수 계산기 - 무료 온라인 카드 게임 점수 관리 도구"
+    />
+    <meta
+      property="og:description"
+      content="Skull King 카드 게임을 위한 무료 온라인 점수 계산기입니다. 2-8명의 플레이어를 지원하며, 특수 카드 추적과 실시간 점수 업데이트 기능을 제공합니다."
+    />
+    <meta
+      property="og:image"
+      content="https://gomjellie.github.io/skull-king/screenshot.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Skull King 점수 계산기" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://gomjellie.github.io/skull-king"
+    />
+    <meta
+      property="twitter:title"
+      content="Skull King 점수 계산기 - 무료 온라인 카드 게임 점수 관리 도구"
+    />
+    <meta
+      property="twitter:description"
+      content="Skull King 카드 게임을 위한 무료 온라인 점수 계산기입니다. 2-8명의 플레이어를 지원하며, 특수 카드 추적과 실시간 점수 업데이트 기능을 제공합니다."
+    />
+    <meta
+      property="twitter:image"
+      content="https://gomjellie.github.io/skull-king/screenshot.png"
+    />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="application-name" content="Skull King 점수 계산기" />
+    <meta name="apple-mobile-web-app-title" content="Skull King" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gomjellie.github.io/skull-king" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Multilingual SEO -->
+    <link
+      rel="alternate"
+      hreflang="ko"
+      href="https://gomjellie.github.io/skull-king"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://gomjellie.github.io/skull-king"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://gomjellie.github.io/skull-king"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "스컬킹 점수 계산기",
+        "alternateName": [
+          "Skull King Score Calculator",
+          "Skull King 점수 계산기",
+          "스컬킹",
+          "Skull King"
+        ],
+        "description": "스컬킹 카드 게임을 위한 무료 온라인 점수 계산기입니다. 2-8명의 플레이어를 지원하며, 특수 카드 추적과 실시간 점수 업데이트 기능을 제공합니다.",
+        "url": "https://gomjellie.github.io/skull-king",
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "softwareVersion": "0.0.0",
+        "datePublished": "2024",
+        "inLanguage": "ko",
+        "isAccessibleForFree": true,
+        "screenshot": "https://gomjellie.github.io/skull-king/screenshot.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Skull King Score Calculator Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Skull King Score Calculator Team"
+        },
+        "featureList": [
+          "2-8명 플레이어 지원",
+          "실시간 점수 계산",
+          "특수 카드 추적",
+          "오프라인 사용 가능",
+          "PWA 지원",
+          "모바일 친화적",
+          "무료 사용",
+          "광고 없음"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "1"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
