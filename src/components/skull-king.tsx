@@ -171,7 +171,7 @@ const SkullKing: React.FC = () => {
       playerScores: players.map((player) => ({
         name: player,
         bid: 0,
-        tricks: 0,
+        tricks: null,
         specialCards: specialCards.reduce(
           (acc, card) => ({ ...acc, [card.name]: 0 }),
           {}
