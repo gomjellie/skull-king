@@ -46,11 +46,11 @@ const SkullKing: React.FC = () => {
   const getButtonClasses = (cardName: string): string => {
     switch (cardName) {
       case 'Pirate':
-        return 'bg-red-700 hover:bg-red-800 text-white border-red-700';
+        return 'bg-red-700 hover:bg-red-800 dark:bg-red-600 dark:hover:bg-red-700 text-white border-red-700 dark:border-red-600';
       case 'Mermaid':
-        return 'bg-[#20B2AA] hover:bg-[#008B8B] text-white border-[#20B2AA]';
+        return 'bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white border-teal-600 dark:border-teal-500';
       case '+10':
-        return 'bg-[#2E8B57] hover:bg-[#228B22] text-white border-[#2E8B57]';
+        return 'bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 text-white border-green-700 dark:border-green-600';
       default:
         return '';
     }
@@ -393,7 +393,7 @@ const SkullKing: React.FC = () => {
     const roundTricksLeft = tricksLeft(round);
     if (roundTricksLeft > 0) {
       return (
-        <div className="w-full bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-center justify-center text-blue-600 font-bold text-lg">
+        <div className="w-full bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg p-4 flex items-center justify-center text-blue-600 dark:text-blue-300 font-bold text-lg">
           <AlertTriangle className="mr-2" size={20} />
           {roundTricksLeft} tricks left!
         </div>
@@ -405,7 +405,7 @@ const SkullKing: React.FC = () => {
   const renderTrickLimitExceededMessage = (round: Round) => {
     if (isTrickLimitExceeded(round)) {
       return (
-        <div className="flex items-center justify-center text-red-500 font-bold mt-2">
+        <div className="flex items-center justify-center text-destructive font-bold mt-2">
           <AlertTriangle className="mr-2" />
           Too many tricks!
         </div>
@@ -497,7 +497,7 @@ const SkullKing: React.FC = () => {
                   <div className="grid grid-cols-[85px_repeat(auto-fit,_minmax(10px,_1fr))]">
                     <div className="text-sm mx-[10px]">Bids</div>
                     {new Array(currentRoundIndex + 2).fill(0).map((_, i) => (
-                      <label className="border border-gray-300 w-full stretch rounded-md has-[:checked]:bg-black has-[:checked]:text-white  hover:bg-gray-500">
+                      <label className="cursor-pointer border border-gray-300 dark:border-gray-600 w-full stretch rounded-md has-[:checked]:bg-foreground has-[:checked]:text-background hover:bg-gray-500 dark:hover:bg-gray-600">
                         <input
                           className="hidden"
                           type="radio"
@@ -515,7 +515,7 @@ const SkullKing: React.FC = () => {
                   <div className="grid grid-cols-[85px_repeat(auto-fit,_minmax(10px,_1fr))]">
                     <div className="text-sm mx-[10px]">Tricks</div>
                     {new Array(currentRoundIndex + 2).fill(0).map((_, i) => (
-                      <label className="border border-gray-300 w-full stretch rounded-md has-[:checked]:bg-black has-[:checked]:text-white  hover:bg-gray-500">
+                      <label className="cursor-pointer border border-gray-300 dark:border-gray-600 w-full stretch rounded-md has-[:checked]:bg-foreground has-[:checked]:text-background hover:bg-gray-500 dark:hover:bg-gray-600">
                         <input
                           className="hidden"
                           type="radio"
