@@ -2,6 +2,7 @@
   "name": "스컬킹 점수 계산기",
   "short_name": "스컬킹",
   "description": "스컬킹 카드 게임을 위한 무료 온라인 점수 계산기입니다. 2-8명의 플레이어를 지원하며, 특수 카드 추적과 실시간 점수 업데이트 기능을 제공합니다. Free online score calculator for Skull King card game.",
+  "id": "/skull-king/",
   "start_url": "/skull-king/",
   "scope": "/skull-king/",
   "display": "standalone",
