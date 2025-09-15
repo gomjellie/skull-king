@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gomjellie.github.io/skull-king/sitemap.xml
