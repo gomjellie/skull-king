@@ -432,11 +432,13 @@ const SkullKing: React.FC = () => {
                     e.target.setSelectionRange(0, e.target.value.length)
                   }
                   className="flex-grow mr-2"
+                  aria-label={`플레이어 ${index + 1} 이름`}
                 />
                 <Button
                   onClick={() => removePlayer(index)}
                   className="p-1"
                   disabled={!canRemovePlayer()}
+                  aria-label={`플레이어 ${player} 제거`}
                 >
                   <X size={16} />
                 </Button>
@@ -470,6 +472,7 @@ const SkullKing: React.FC = () => {
               onClick={() => navigateRound(-1)}
               disabled={currentRoundIndex === 0}
               className="p-1"
+              aria-label="이전 라운드로 이동"
             >
               <ChevronLeft size={16} />
             </Button>
@@ -478,6 +481,7 @@ const SkullKing: React.FC = () => {
               onClick={() => navigateRound(1)}
               disabled={currentRoundIndex === rounds.length - 1}
               className="p-1"
+              aria-label="다음 라운드로 이동"
             >
               <ChevronRight size={16} />
             </Button>
@@ -497,7 +501,10 @@ const SkullKing: React.FC = () => {
                   <div className="grid grid-cols-[85px_repeat(auto-fit,_minmax(10px,_1fr))]">
                     <div className="text-sm mx-[10px]">Bids</div>
                     {new Array(currentRoundIndex + 2).fill(0).map((_, i) => (
-                      <label className="cursor-pointer border border-gray-300 dark:border-gray-600 w-full stretch rounded-md has-[:checked]:bg-foreground has-[:checked]:text-background hover:bg-gray-500 dark:hover:bg-gray-600">
+                      <label
+                        key={`bid-${i}`}
+                        className="cursor-pointer border border-gray-300 dark:border-gray-600 w-full stretch rounded-md has-[:checked]:bg-foreground has-[:checked]:text-background hover:bg-gray-500 dark:hover:bg-gray-600"
+                      >
                         <input
                           className="hidden"
                           type="radio"
@@ -507,6 +514,7 @@ const SkullKing: React.FC = () => {
                           onChange={() =>
                             updatePlayerScore(playerIndex, 'bid', i)
                           }
+                          aria-label={`${playerScore.name} 플레이어 ${i}개 예측`}
                         />
                         <span>{i}</span>
                       </label>
@@ -515,7 +523,10 @@ const SkullKing: React.FC = () => {
                   <div className="grid grid-cols-[85px_repeat(auto-fit,_minmax(10px,_1fr))]">
                     <div className="text-sm mx-[10px]">Tricks</div>
                     {new Array(currentRoundIndex + 2).fill(0).map((_, i) => (
-                      <label className="cursor-pointer border border-gray-300 dark:border-gray-600 w-full stretch rounded-md has-[:checked]:bg-foreground has-[:checked]:text-background hover:bg-gray-500 dark:hover:bg-gray-600">
+                      <label
+                        key={`tricks-${i}`}
+                        className="cursor-pointer border border-gray-300 dark:border-gray-600 w-full stretch rounded-md has-[:checked]:bg-foreground has-[:checked]:text-background hover:bg-gray-500 dark:hover:bg-gray-600"
+                      >
                         <input
                           className="hidden"
                           type="radio"
@@ -525,6 +536,7 @@ const SkullKing: React.FC = () => {
                           onChange={() =>
                             updatePlayerScore(playerIndex, 'tricks', i)
                           }
+                          aria-label={`${playerScore.name} 플레이어 ${i}개 획득`}
                         />
                         <span>{i}</span>
                       </label>
@@ -541,6 +553,9 @@ const SkullKing: React.FC = () => {
                         getButtonClasses(card.name)
                       )}
                       disabled={!shouldEnableSpecialCards(playerScore)}
+                      aria-label={`${playerScore.name} 플레이어 ${
+                        card.name
+                      } 카드 ${playerScore.specialCards[card.name]}개`}
                     >
                       {card.name}:{' '}
                       <span className="font-bold ml-1 text-sm">
@@ -621,6 +636,7 @@ const SkullKing: React.FC = () => {
             onClick={handleShareLink}
             className="h-8 px-3 text-sm"
             variant="outline"
+            aria-label="게임 상태 공유하기"
           >
             <Share2 className="mr-2" size={16} /> Share
           </Button>
