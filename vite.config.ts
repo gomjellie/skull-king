@@ -12,6 +12,7 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     'robots.txt',
     'sitemap.xml',
     'manifest.json',
+    'screenshot.png',
   ],
   manifest: {
     name: 'Skull King',
