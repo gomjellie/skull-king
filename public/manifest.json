@@ -13,28 +13,28 @@
   "categories": ["games", "utilities"],
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/skull-king/favicon.ico",
       "sizes": "16x16 32x32",
       "type": "image/x-icon"
     },
     {
-      "src": "/logo192.png",
+      "src": "/skull-king/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/logo512.png",
+      "src": "/skull-king/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/skull-king/apple-touch-icon.png",
       "type": "image/png",
       "sizes": "180x180",
       "purpose": "any"
     },
     {
-      "src": "/maskable_icon.png",
+      "src": "/skull-king/maskable_icon.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
@@ -42,7 +42,7 @@
   ],
   "screenshots": [
     {
-      "src": "/screenshot.png",
+      "src": "/skull-king/screenshot.png",
       "type": "image/png",
       "sizes": "1200x630",
       "form_factor": "wide"
