@@ -14,7 +14,7 @@
   "icons": [
     {
       "src": "/skull-king/favicon.ico",
-      "sizes": "16x16 32x32",
+      "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
@@ -36,7 +36,7 @@
     {
       "src": "/skull-king/maskable_icon.png",
       "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "640x640",
       "purpose": "maskable"
     }
   ],
@@ -44,7 +44,7 @@
     {
       "src": "/skull-king/screenshot.png",
       "type": "image/png",
-      "sizes": "1200x630",
+      "sizes": "800x3008",
       "form_factor": "wide"
     }
   ]
